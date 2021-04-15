@@ -27,7 +27,3 @@ export const toggleBookmark = createAction(
 );
 
 export const clearHomeState = createAction('[Home] Clear Home State');
-
-export function changeText(arg0: { text: any; }): any {
-  throw new Error('Function not implemented.');
-}

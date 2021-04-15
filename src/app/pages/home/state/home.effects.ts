@@ -27,7 +27,7 @@ export class HomeEffects {
     .pipe(
       ofType(fromHomeActions.loadCurrentWeatherById),
       mergeMap(({ id }: { id: string }) =>
-        this.weatherService.getCityWeatherByQuery(id)
+        this.weatherService.getCityWeatherById(id)
       ),
       catchError((err, caught$) => {
         this.store.dispatch(fromHomeActions.loadCurrentWeatherFailed());
